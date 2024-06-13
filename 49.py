@@ -82,11 +82,11 @@ def copy_row(file_name, file_name2):
         print("Введен неправильный номер строки!")
 
 
-def standart_write(file_name, res):
-    with open(file_name, "w", encoding="UTF-8", newline="") as data:
-        f_w = DictWriter(data, fieldnames=["first_name", "second_name", "phone_number"])
-        f_w.writeheader()
-        f_w.writerows(res)
+#def standart_write(file_name, res):
+#    with open(file_name, "w", encoding="UTF-8", newline="") as data:
+#        f_w = DictWriter(data, fieldnames=["first_name", "second_name", "phone_number"])
+#        f_w.writeheader()
+#        f_w.writerows(res)
 
 def standart_write2(file_name2, res2):
     with open(file_name2, "a", encoding="UTF-8", newline="") as data:
@@ -94,10 +94,9 @@ def standart_write2(file_name2, res2):
         f_w.writeheader()
         f_w.writerows(res2)
 
-
-def copy_file(file_name, file_name2):
-    res = read_file(file_name)
-    standart_write2(file_name2, res)
+#def copy_file(file_name, file_name2):
+#    res = read_file(file_name)
+#    standart_write2(file_name2, res)
 
 
 file_name = "phone.csv"
@@ -123,11 +122,11 @@ def main():
                 print("Файл отсутствует, создайте файл")
                 continue
             remove_row(file_name)
-        elif command == "c":
-            if not exists(file_name):
-                print("Файл отсутствует, создайте файл")
-                continue
-            copy_file(file_name, file_name2)
+#        elif command == "c":
+#            if not exists(file_name):
+#                print("Файл отсутствует, создайте файл")
+#                continue
+#            copy_file(file_name, file_name2)
         elif command == "k":
             if not exists(file_name):
                 print("Файл отсутствует, создайте файл")
